@@ -73,14 +73,14 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
 
     ```python
     # Geef de url in een variabele
-    url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
+    url = ''
     ```
 
 7. Maak daarna gebruik van de bij _4_ geimporteerde libraries. Hiermee haal je HTML pagina op.
 
     ```python
     # query de website en sla deze op in de variabele `pagina`
-    pagina = urllib2.urlopen(url)
+    pagina = urllib2.urlopen(naam van je url variabele hier neerzetten)
     ```
 
 8. Als laaste verwerken (parsen) we de pagina in een BeautifulSoup format zodat BeautifulSoup haar werk kan doen.
@@ -111,11 +111,12 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
     print (all_movies)
     ```python
 
-12. Nu gaan we de film die op nummer 1 staat ophalen  
+12. Nu gaan we de link van de film die op nummer 1 staat ophalen  
 
     ```python
     movie_nmbr_1 = table.find('td', attrs={'class': 'titleColumn'})
-    print (movie_nmbr_1.a.contents[0])
+    print (movie_nmbr_1.a)
     ```
+13. Nu moet jij proberen alleen de titel van bij 13. verkregen anchor tag zien op te halen (tag.content)
 
-13. Je weet nu hoe je de titel van 1 film moet ophalen en je weet nu hoe je alle films moet ophalen. Schrijf nu een loop die alle film titels van de Top Rated Movies op imdb.com ophaalt en in je terminal toont.
+14. Je weet nu hoe je de titel van 1 film moet ophalen en je weet nu hoe je alle films moet ophalen. Schrijf nu een loop die alle film titels van de Top Rated Movies op imdb.com ophaalt en in je terminal toont.
