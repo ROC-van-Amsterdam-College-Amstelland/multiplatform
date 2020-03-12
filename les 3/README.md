@@ -117,6 +117,6 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
     movie_nmbr_1 = table.find('td', attrs={'class': 'titleColumn'})
     print (movie_nmbr_1.a)
     ```
-13. Nu moet jij proberen alleen de titel van bij 13. verkregen anchor tag zien op te halen (_tag.content_)
+13. Nu moet jij proberen alleen de titel van bij 13. verkregen anchor tag zien op te halen (_tag_.content)
 
 14. Je weet nu hoe je de titel van 1 film moet ophalen en je weet nu hoe je alle films moet ophalen. Schrijf nu een loop die alle film titels van de Top Rated Movies op imdb.com ophaalt en in je terminal toont.
