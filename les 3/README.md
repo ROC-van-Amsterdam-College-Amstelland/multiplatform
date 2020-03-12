@@ -32,6 +32,17 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
 2. Scrape niet te aggressief (spamming). Eén _request_ per seconde is goed gebruik.
 3. De layout van een website verandered van tijd tot tijd. Blijf dit checken, anders gaat je app kapot.
 
+### Benodigdheden
+
+- Python 3.4
+- BeautifulSoup4
+
+1. Installeer Python als je dat nog niet hebt gedaan: https://www.python.org/
+2. Installeer BeautifulSoup4 met het volgende commando in je terminal: 
+
+   ```
+   pip install beautifulSoup4
+   ```
 ### Stappenplan
 
 1. Inspecteer de site: https://www.imdb.com/chart/top/?ref_=nv_mv_250
