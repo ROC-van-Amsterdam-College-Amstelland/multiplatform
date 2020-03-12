@@ -16,7 +16,8 @@ Scrape een website om een overzicht te maken van de top 50 films
 Elke website bestaat uit html tags die je kunt bekijken met het blote oog. Maar je kunt er ook een zelfgeschreven programma naar laten kijken. 
 Sterker nog, je kunt de _data_ uitlezen met code. 
 
-Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een scraper die door een lijst van _imdb.com_ loopt. De top 50 slaan we op in excel.
+Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een scraper die door een lijst van _imdb.com_ loopt. 
+
 
 #### HTML
 
@@ -27,8 +28,8 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
 
 #### Scraping regels
 
-1. Bekijk de voorwaarden van een webiste op het gebruik van scrapers. Meestal kun je het gewoon doen zolang je maar niet commercieel aan de slag gaat.
-2. Scrape niet te aggressief (spamming). Een _request_ per seconde is goed gebruik.
+1. Bekijk de voorwaarden van een website op het gebruik van scrapers. Meestal kun je het gewoon doen zolang je maar niet commercieel aan de slag gaat.
+2. Scrape niet te aggressief (spamming). Eén _request_ per seconde is goed gebruik.
 3. De layout van een website verandered van tijd tot tijd. Blijf dit checken, anders gaat je app kapot.
 
 ### Stappenplan
@@ -75,7 +76,7 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
 
     ```python
     # parse de html door gebruik te maken van BeautifulSoupo en sla deze op in `soep`
-    soep = BeautifulSoup(pagina, ‘html.parser’)
+    soep = BeautifulSoup(pagina, 'html.parser')
     ```
 
 9. Nu hebben we een variabele `soep` met daarin HTML van de pagina. Nu kunnen we coderen om data eruit te halen. We kunnen de content, in dit geval de __titel__ ophalen met de methode `find()`. Het gaat om de titel __'Top Rated Movies'__
