@@ -41,7 +41,7 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
 
 3. Hier zie je dat de website parent child elementen als volgt zijn:
 
-    ```
+   ```
     table.chart.full-width
         tbody.lister-list
             td.titleColumn
@@ -50,47 +50,58 @@ Dat ga je ook doen in deze opdracht. Je gaat een scraper bouwen. Je bouwt een sc
 4. Coderen van de scraper: Maak een scraper.py bestand
 
 5. Importeer libraries
-    ```
+
+    ```python
     # importeer libraries
     import urllib2
     from bs4 import BeautifulSoup
     ```
 
 6. Bepaal welke website je wilt scrapen
-    ```
+
+    ```python
     # Geef de url in een variabele
     url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
     ```
+
 7. Maak daarna gebruik van de bij _4_ geimporteerde libraries. Hiermee haal je HTML pagina op.
-    ```
+
+    ```python
     # query de website en sla deze op in de variabele `pagina`
     pagina = urllib2.urlopen(url)
     ```
+
 8. Als laaste verwerken (parsen) we de pagina in een BeautifulSoup format zodat BeautifulSoup haar werk kan doen.
-    ```
+
+    ```python
     # parse de html door gebruik te maken van BeautifulSoupo en sla deze op in `soep`
     soep = BeautifulSoup(pagina, ‘html.parser’)
     ```
+
 9. Nu hebben we een variabele `soep` met daarin HTML van de pagina. Nu kunnen we coderen om data eruit te halen. We kunnen de content, in dit geval de __titel__ ophalen met de methode `find()`. Het gaat om de titel __'Top Rated Movies'__
 
-    ```
+    ```python
     # met `.string` kunnen we de tekst van een HTML element ophalen (net als innerHTML)
     title = soep.find('h1', attrs={'class': 'header'})
     print (title.string)
     ```
+
 10. Willen we de gehele tabel ophalen dan kan dat met ondertaande code, dit is nog __NIET__ wat je wilt.....
 
-    ```
+    ```python
     table = soep.find('table', attrs={'class': 'chart full-width'})
     print (table)
     ```
+
 11. Je weet nu dan je kunt zoeken in een HTML pagina. Je maakt gebruik van de functie `find()`. Deze functie heeft twee argumenten nodig: _tag naam_ & _attrs-object_. Waarbij je bij het laatste argument `class` of `id` kunt gebruiken. Onderstaande code maakt ook nog eens gebruik van de functie `find_all()` om alle __titleColumns__ op te halen.
-    ```
+    ```python
     all_movies = table.find_all('td', attrs={'class': 'titleColumn'})
     print (all_movies)
-    ```
-12. Nu gaan we de film die op nummer 1 staat ophalen,
-    ```
+    ```python
+
+12. Nu gaan we de film die op nummer 1 staat ophalen  
+
+    ```python
     movie_nmbr_1 = table.find('td', attrs={'class': 'titleColumn'})
     print (movie_nmbr_1.a.contents[0])
     ```
