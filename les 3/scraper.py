@@ -1,31 +1,27 @@
 # importeer libraries
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 # Geef de url in een variabele
-url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
+url = ''
 
 # query de website en sla deze op in de variabele `pagina`
-pagina = urlopen(url)
+pagina = 
 
 # parse de html door gebruik te maken van BeautifulSoupo en sla deze op in `soep`
-soep = BeautifulSoup(pagina, 'html.parser')
+soep = 
 
 
-title = soep.find('h1', attrs={'class': 'header'})
+title = soep.find()
 print (title.string)
 
-table = soep.find('table', attrs={'class': 'chart full-width'})
+table = soep.find()
 # print (table)
 
-all_movies = table.find_all('td', attrs={'class': 'titleColumn'})
+all_movies = table.find_all()
 # print (second.a.contents[0])
 
 print (all_movies)
 
-movie_nmbr_1 = table.find('td', attrs={'class': 'titleColumn'})
-print (movie_nmbr_1.a.contents[0])
+movie_nmbr_1 = table.find()
+print (movie_nmbr_1)
